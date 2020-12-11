@@ -13,7 +13,8 @@ So if we know what bytes can result in x01 when xor with decryted message(interm
 So, for the second last bytes, we could continue this padding orcale again. Since we know the last bytes of intermediate, it is not necessary to iterate the last bytes of guessing word, but focus on iterating the last second bytes. (the last bytes value should set as value which xor with last bytes of intermediate resulting in x02) . 
 Once we get successful repsonse, we can reverse to get the true value of last second bytes of intermediate. 
 
+
+So padding oracle is like keeping trying different number until we get what we want. 
+
 There are some obervsation we can observe. Plaintext is always depended on the previous block. So when trying to attack a block, we could only focus on the previous block. It may help you not to sidetrack by oerwhelming block.   
 
-
-so padding oracle is like keeping trying different number until we get what we want. 
